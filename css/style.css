@@ -19,6 +19,14 @@ h1 {
     border-style: none dashed none none;
     width: 6px;
     height: 450px;
+    border-color: darkslategrey;
+}
+
+.instructions {
+    position: absolute;
+    left: 243px;
+    top: 50px;
+    text-align: center;
 }
 
 .left-player {

@@ -4,8 +4,8 @@ import Game from './game';
 let game;
 document.addEventListener('keypress', e => {
     const spaceKey = 32;
-    if (e.which === spaceKey) {
+    if (e.which === spaceKey && (game == null || !game.inProgress)) {
         game = new Game();
-        requestAnimationFrame(game.mainLoop);
+        requestAnimationFrame(currentTime => game.mainLoop(currentTime));
     }
 })
