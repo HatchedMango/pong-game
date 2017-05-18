@@ -3,7 +3,7 @@ import Opponent from './opponent';
 import Ball from './ball';
 
 const paddleSpeed = 0.35, ballSpeed = 0.5;
-const minFrameTime = 16.5;
+const minFrameTime = 14; // set just faster than 60fps
 const topWall = 5, bottomWall = 445,
       leftWall = 0, rightWall = 800;
 
