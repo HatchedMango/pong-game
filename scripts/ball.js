@@ -5,7 +5,7 @@ export default class Ball {
 
         if (Math.random() > 0.5) speed *= -1;
         [this.xCoord, this.yCoord] = [400, 225];
-        [this.xVelocity, this.yVelocity] = [speed, Math.random() * speed * ((Math.random() > 0.5) ? 1 : -1) * 0.7];
+        [this.xVelocity, this.yVelocity] = [speed, Math.random() * speed * ((Math.random() > 0.5) ? 1 : -1) * 0.3];
     }
 
     get leftXCoord() {

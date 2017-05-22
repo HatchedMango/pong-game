@@ -54,7 +54,7 @@ export default class Game {
     }
 
     handleIntersect() {
-        let verticalChange = Math.abs(this.ball.xVelocity) * 0.25;
+        let verticalChange = Math.abs(this.ball.xVelocity) * 0.10;
 
         if (this.ballIntersectLeftPaddle()) {
             if (this.player.upKeyPressed && this.ball.notExceedYVelocity)
@@ -65,9 +65,9 @@ export default class Game {
         }
 
         if (this.ballIntersectRightPaddle()) {
-            if (this.opponent.reasonToMoveUp && this.ball.notExceedYVelocity)
+            if (this.opponent.reasonToMoveUp(this.getBallMovementData()) && this.ball.notExceedYVelocity)
                 this.ball.yVelocity += verticalChange;
-            if (this.opponent.reasonToMoveDown && this.ball.notExceedYVelocity)
+            if (this.opponent.reasonToMoveDown(this.getBallMovementData()) && this.ball.notExceedYVelocity)
                 this.ball.yVelocity -= verticalChange;
             this.ball.switchHorizontalDirection();
         }
